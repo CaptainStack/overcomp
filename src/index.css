@@ -1,5 +1,93 @@
 body {
   margin: 0;
-  padding: 0;
+  padding: 3em;
   font-family: sans-serif;
+  background-color: slategray;
+}
+.hero-slot {
+  padding: 1em;
+  width: 112px;
+  height: 150px;
+}
+.hero-slot h3 {
+  font: italic normal normal 10px Big Noodle Too,impact,sans-serif;
+  font-size: 1.2rem;
+  line-height: normal;
+  letter-spacing: .08rem;
+}
+.slot-portrait {
+  border: 1px solid black;
+  width: 110px;
+  height: 100px;
+  background-color: darkgray;
+  border-radius: 7px;
+  overflow: hidden;
+}
+.selected.slot-portrait:hover {
+  cursor: pointer;
+  border: 1px solid #f9ab4f;
+}
+
+.hero-button {
+  cursor: pointer;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+h1 {
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-image {
+  display: inline-block;
+  width: calc(100% + 10px);
+  height: 100%;
+  background-size: auto 100%;
+  background-position: 50% 50%;
+  position: relative;
+  -webkit-transform: skew(-25rad) translateX(-5px);
+  -ms-transform: skew(-25rad) translateX(-5px);
+  transform: skew(-25rad) translateX(-5px);
+}
+.clipping-mask {
+  display: block;
+  position: relative;
+  width: 70px;
+  height: 84px;
+  margin: 2.4px 6px;
+  border-top: 3px solid #f0edf2;
+  border-bottom: 3px solid #f0edf2;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  background-color: rgba(51,51,51,.9);
+  background-clip: padding-box;
+  overflow: hidden;
+  border-radius: 7px;
+  transform: skew(25rad);
+}
+.clipping-mask:hover {
+  background-color: #f9ab4f;
+  border: 3px solid #f0edf2;
+}
+.hero-portrait-label {
+  position: relative;
+  display: inline-block;
+  top: -4.2px;
+  margin-left: -10px;
+  padding: 1px 10px;
+  font-size: 1.3rem;
+  color: #333;
+  white-space: nowrap;
+  font: italic normal normal 14px Big Noodle Too,impact,sans-serif;
+}
+.selected {
+  background-color: lightblue;
 }
