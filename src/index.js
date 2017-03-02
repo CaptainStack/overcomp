@@ -174,6 +174,18 @@ let state = {
   },
   {
     id: 15,
+    name: "Orisa",
+    hitpoints: 200,
+    armor: 200,
+    shields: 0,
+    barrier: 900,
+    portrait: "orisa-portrait.png",
+    category: "tank",
+    healing: 0,
+    tank: 1
+  },
+  {
+    id: 15,
     name: "Reinhardt",
     hitpoints: 300,
     armor: 200,
