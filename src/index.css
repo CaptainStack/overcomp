@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 3em;
   font-family: sans-serif;
-  background-color: #a8b3bd;
+  background-color: #8b99a7;
 }
 .hero-slot {
   padding: 1em;
@@ -19,7 +19,7 @@ body {
   border: 1px solid black;
   width: 110px;
   height: 100px;
-  background-color: #f0edf2;
+  background-color: #dad3df;
   border-radius: 7px;
   overflow: hidden;
 }
