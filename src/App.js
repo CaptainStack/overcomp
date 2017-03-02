@@ -1,25 +1,29 @@
 import React from 'react';
 import './App.css';
-import HeroButton from './components/HeroButton';
-import HeroSlot from './components/HeroSlot';
-import TeamStats from './components/TeamStats';
+import HeroSet from './components/HeroSet';
+import TeamRoster from './components/TeamRoster';
+// import HeroSlot from './components/HeroSlot';
+// import TeamStats from './components/TeamStats';
 
 const App = ({state}) => {
-  let hero_buttons = state.heroes.map((hero) => 
-    <HeroButton key={hero.id} 
-                hero={hero} 
-                roster={state.selected_heroes}
-                clickAction={state.buttonClick(hero.id)} />);
-  let hero_slots = state.selected_heroes.map((selected_hero) => 
-    <HeroSlot key={selected_hero.id} 
-              hero={selected_hero} 
-              clickAction={state.slotClick(selected_hero.id)} />);
+  let offense_heroes = state.heroes.filter((hero) => hero.category === 'offense');
+  let defense_heroes = state.heroes.filter((hero) => hero.category === 'defense');
+  let tank_heroes = state.heroes.filter((hero) => hero.category === 'tank');
+  let support_heroes = state.heroes.filter((hero) => hero.category === 'support');
+
   return (
     <div className="App">
       <img id='logo' src='logo.png' alt='logo'/>
-      <div className='row'>{hero_slots}</div>
-      <div className='row'><TeamStats team={state.selected_heroes} /></div>
-      <div className='row'>{hero_buttons}</div>
+      {/*<div className='row'><div className='hero-slots'>{hero_slots}</div> <TeamStats team={state.selected_heroes} /></div>*/}
+      <div className='row' id='team-row'>
+        <TeamRoster selected_heroes={state.selected_heroes} clickAction={state.slotClick} />
+      </div>
+      <div className='row' id='hero-select'>
+        <HeroSet heroes={offense_heroes} selected_heroes={state.selected_heroes} category='Offense' clickAction={state.buttonClick}/>
+        <HeroSet heroes={defense_heroes} selected_heroes={state.selected_heroes} category='Defense' clickAction={state.buttonClick}/>
+        <HeroSet heroes={tank_heroes} selected_heroes={state.selected_heroes} category='Tank' clickAction={state.buttonClick}/>
+        <HeroSet heroes={support_heroes} selected_heroes={state.selected_heroes} category='Support' clickAction={state.buttonClick}/>
+      </div>
     </div>
   );
 };

@@ -1,19 +1,31 @@
 body {
   margin: 0;
-  padding: 3em;
+  padding: 1em;
   font-family: sans-serif;
   background-color: #8b99a7;
 }
+#hero-slots {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 500px;
+}
+#team-roster {
+  display: flex;
+  justify-content: space-around;
+}
 .hero-slot {
-  padding: 1em;
+  padding: 0.5em;
+  display: inline-block;
   width: 112px;
-  height: 150px;
 }
 .hero-slot h3 {
   font: italic normal normal 10px Big Noodle Too,impact,sans-serif;
   font-size: 1.2rem;
   line-height: normal;
   letter-spacing: .08rem;
+  margin: 0;
+  text-align: center;
 }
 .slot-portrait {
   border: 1px solid black;
@@ -30,6 +42,7 @@ body {
 
 .hero-button {
   cursor: pointer;
+  display: inline-block;
 }
 .App {
   display: flex;
@@ -41,6 +54,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: top;
 }
 #logo {
   margin-left: auto;
@@ -92,4 +106,18 @@ body {
 }
 .selected {
   background-color: lightblue;
+}
+.hero-set h2 {
+  text-align: center;
+  margin: 0px;
+}
+#hero-select {
+  display: flex;
+  justify-content: space-around;
+}
+.hero-set > span {
+  width: 100%;
+  height: 2px;
+  opacity: .2;
+  background: #fff;
 }
