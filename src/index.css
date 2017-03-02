@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 3em;
   font-family: sans-serif;
-  background-color: slategray;
+  background-color: #a8b3bd;
 }
 .hero-slot {
   padding: 1em;
@@ -19,7 +19,7 @@ body {
   border: 1px solid black;
   width: 110px;
   height: 100px;
-  background-color: darkgray;
+  background-color: #f0edf2;
   border-radius: 7px;
   overflow: hidden;
 }
@@ -42,9 +42,11 @@ body {
   flex-wrap: wrap;
   justify-content: center;
 }
-h1 {
+#logo {
   margin-left: auto;
   margin-right: auto;
+  width: 400px;
+  margin-bottom: 50px;
 }
 .hero-image {
   display: inline-block;

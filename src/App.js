@@ -16,7 +16,7 @@ const App = ({state}) => {
               clickAction={state.slotClick(selected_hero.id)} />);
   return (
     <div className="App">
-      <h1>Overcomp</h1>
+      <img id='logo' src='logo.png' alt='logo'/>
       <div className='row'>{hero_slots} <TeamStats team={state.selected_heroes} /></div>
       <h2>Select Your Heroes</h2>
       <div className='row'>{hero_buttons}</div>
