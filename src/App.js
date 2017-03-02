@@ -17,8 +17,8 @@ const App = ({state}) => {
   return (
     <div className="App">
       <img id='logo' src='logo.png' alt='logo'/>
-      <div className='row'>{hero_slots} <TeamStats team={state.selected_heroes} /></div>
-      <h2>Select Your Heroes</h2>
+      <div className='row'>{hero_slots}</div>
+      <div className='row'><TeamStats team={state.selected_heroes} /></div>
       <div className='row'>{hero_buttons}</div>
     </div>
   );
