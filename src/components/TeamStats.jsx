@@ -34,17 +34,17 @@ const TeamStats = ({team}) => {
               <div style={{display: 'inline-block', 
                            backgroundColor: '#C8C7CF',
                            transition: '0.5s',
-                           width: hitpoints / 2900 * 100  + '%', 
+                           width: hitpoints / 3000 * 100  + '%', 
                            height: '20px'}}></div>
               <div style={{display: 'inline-block', 
                            backgroundColor: '#C6A544',
                            transition: '0.5s',
-                           width: armor / 2900 * 100  + '%', 
+                           width: armor / 3000 * 100  + '%', 
                            height: '20px'}}></div>
               <div style={{display: 'inline-block', 
                            backgroundColor: '#2894B1',
                            transition: '0.5s',
-                           width: shields / 2900 * 100  + '%', 
+                           width: shields / 3000 * 100  + '%', 
                            height: '20px'}}></div>
             </td>
             <td style={{width: '150px', textAlign: 'left'}}>
@@ -78,7 +78,7 @@ const TeamStats = ({team}) => {
             <td><div style={{display: 'inline-block', 
                             backgroundColor: tank_color,
                             transition: '0.5s',
-                            width: tank / 7 * 100  + '%', 
+                            width: tank / 8 * 100  + '%', 
                             height: '20px'}}></div></td>
             <td style={{width: '150px', textAlign: 'left'}}>{tank_message}</td>
           </tr>
