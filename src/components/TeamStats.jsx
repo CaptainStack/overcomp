@@ -31,9 +31,21 @@ const TeamStats = ({team}) => {
           <tr>
             <td style={{width: '100px', textAlign: 'right'}}>HP/Armor/Shields:</td>
             <td style={{width: '50%'}}>
-              <div style={{display: 'inline-block', backgroundColor: '#C8C7CF', width: hitpoints / 2900 * 100  + '%', height: '20px'}}></div>
-              <div style={{display: 'inline-block', backgroundColor: '#C6A544', width: armor / 2900 * 100  + '%', height: '20px'}}></div>
-              <div style={{display: 'inline-block', backgroundColor: '#2894B1', width: shields / 2900 * 100  + '%', height: '20px'}}></div>
+              <div style={{display: 'inline-block', 
+                           backgroundColor: '#C8C7CF',
+                           transition: '0.5s',
+                           width: hitpoints / 2900 * 100  + '%', 
+                           height: '20px'}}></div>
+              <div style={{display: 'inline-block', 
+                           backgroundColor: '#C6A544',
+                           transition: '0.5s',
+                           width: armor / 2900 * 100  + '%', 
+                           height: '20px'}}></div>
+              <div style={{display: 'inline-block', 
+                           backgroundColor: '#2894B1',
+                           transition: '0.5s',
+                           width: shields / 2900 * 100  + '%', 
+                           height: '20px'}}></div>
             </td>
             <td style={{width: '150px', textAlign: 'left'}}>
               {hitpoints + '/' + armor + '/' + shields}
@@ -42,7 +54,11 @@ const TeamStats = ({team}) => {
           <tr>
             <td style={{width: '100px', textAlign: 'right'}}>Barriers:</td>
             <td style={{width: '50%'}}>
-              <div style={{display: 'inline-block', backgroundColor: '#C8C7CF', width: barrier / 6025 * 100 + '%', height: '20px'}}></div>
+              <div style={{display: 'inline-block', 
+                           backgroundColor: '#C8C7CF',
+                           transition: '0.5s',
+                           width: barrier / 6025 * 100 + '%', 
+                           height: '20px'}}></div>
             </td>
             <td style={{width: '150px', textAlign: 'left'}}>
               {barrier}
@@ -50,7 +66,11 @@ const TeamStats = ({team}) => {
           </tr>
           <tr>
             <td style={{width: '100px', textAlign: 'right'}}>Healing:</td>
-            <td><div style={{display: 'inline-block', backgroundColor: healing_color, width: healing / 15 * 100  + '%', height: '20px'}}></div></td>
+            <td><div style={{display: 'inline-block', 
+                             backgroundColor: healing_color, 
+                             transition: '0.5s',
+                             width: healing / 15 * 100  + '%', 
+                             height: '20px'}}></div></td>
             <td style={{width: '150px', textAlign: 'left'}}>{healing_message}</td>
           </tr>
           <tr>
