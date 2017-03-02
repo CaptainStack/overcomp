@@ -13,6 +13,7 @@ body {
 #team-roster {
   display: flex;
   justify-content: space-around;
+  margin-bottom: 2em;
 }
 #team-stats h2 {
   text-align: center;
