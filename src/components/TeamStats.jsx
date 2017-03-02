@@ -75,7 +75,11 @@ const TeamStats = ({team}) => {
           </tr>
           <tr>
             <td style={{width: '100px', textAlign: 'right'}}>Tank:</td>
-            <td><div style={{display: 'inline-block', backgroundColor: tank_color, width: tank / 7 * 100  + '%', height: '20px'}}></div></td>
+            <td><div style={{display: 'inline-block', 
+                            backgroundColor: tank_color,
+                            transition: '0.5s',
+                            width: tank / 7 * 100  + '%', 
+                            height: '20px'}}></div></td>
             <td style={{width: '150px', textAlign: 'left'}}>{tank_message}</td>
           </tr>
           </tbody>
