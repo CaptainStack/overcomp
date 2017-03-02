@@ -19,7 +19,7 @@ body {
   border: 1px solid black;
   width: 110px;
   height: 100px;
-  background-color: #dad3df;
+  background-color: rgb(200, 199, 207);
   border-radius: 7px;
   overflow: hidden;
 }
