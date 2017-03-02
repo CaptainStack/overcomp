@@ -307,14 +307,14 @@ let state = {
       let empty_index = state.selected_heroes.findIndex((hero) => hero.name === "Empty");
       state.selected_heroes[empty_index] = clicked_hero;
     } else {
-      state.selected_heroes[selected_index] = {id: selected_index + 24, name: "Empty", hitpoints: 0, armor: 0, shields: 0, barrier: 0, healing: 0, tank: 0};
+      state.selected_heroes[selected_index] = {id: selected_index + 25, name: "Empty", hitpoints: 0, armor: 0, shields: 0, barrier: 0, healing: 0, tank: 0};
     }
     ReactDOM.render(<App state={state}/>, document.getElementById('root'));
   },
   slotClick: slot_id => e => {
     let clicked_index = state.selected_heroes.findIndex((slot) => slot.id === slot_id);
     if (state.selected_heroes[clicked_index].name !== "Empty") {
-      state.selected_heroes[clicked_index] = {id: clicked_index + 24, name: "Empty", hitpoints: 0, armor: 0, shields: 0, barrier: 0, healing: 0, tank: 0};
+      state.selected_heroes[clicked_index] = {id: clicked_index + 25, name: "Empty", hitpoints: 0, armor: 0, shields: 0, barrier: 0, healing: 0, tank: 0};
       ReactDOM.render(<App state={state}/>, document.getElementById('root'));
     }
   }
