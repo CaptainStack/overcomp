@@ -27,9 +27,9 @@ const TeamStats = ({team}) => {
           <tr>
             <td style={{width: '100px'}}>HP/Armor/Shields:</td>
             <td style={{width: '600px'}}>
-              <div style={{display: 'inline-block', backgroundColor: '#C8C7CF', width: hitpoints / 5 + 'px', height: '25px'}}></div>
-              <div style={{display: 'inline-block', backgroundColor: '#C6A544', width: armor / 5 + 'px', height: '25px'}}></div>
-              <div style={{display: 'inline-block', backgroundColor: '#2894B1', width: shields / 5 + 'px', height: '25px'}}></div>
+              <div style={{display: 'inline-block', backgroundColor: '#C8C7CF', width: (600 / 2900) * hitpoints + 'px', height: '25px'}}></div>
+              <div style={{display: 'inline-block', backgroundColor: '#C6A544', width: (600 / 2900) * armor + 'px', height: '25px'}}></div>
+              <div style={{display: 'inline-block', backgroundColor: '#2894B1', width: (600 / 2900) * shields + 'px', height: '25px'}}></div>
             </td>
             <td>
             </td>
