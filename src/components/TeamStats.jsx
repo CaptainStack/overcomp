@@ -6,13 +6,16 @@ const TeamStats = ({team}) => {
   let shields = team.reduce((acc, hero) => acc + hero.shields, 0);
   let healing = team.reduce((acc, hero) => acc + hero.healing, 0);
   let tank = team.reduce((acc, hero) => acc + hero.tank, 0);
+  let barrier = team.reduce((acc, hero) => acc + hero.barrier, 0);
+
   let healing_message;
   let tank_message;
   let healing_color;
   let tank_color;
+
   if (healing === 0) { healing_message = 'No healer'; healing_color = 'indianred' }
-  else if (healing === 1) { healing_message = 'Need more healing'; healing_color = 'indianred' }
-  else if (healing < 3) { healing_message = 'Need more healing'; healing_color = 'palegoldenrod' }
+  else if (healing > 0 && healing < 4) { healing_message = 'Need more healing'; healing_color = 'indianred' }
+  else if (healing > 3 && healing < 6) { healing_message = 'Need more healing'; healing_color = 'palegoldenrod' }
   else { healing_color = 'darkseagreen'}
 
   if (tank === 0) { tank_message = 'No tank'; tank_color = 'indianred' }
@@ -36,14 +39,24 @@ const TeamStats = ({team}) => {
             </td>
           </tr>
           <tr>
+            <td style={{width: '100px', textAlign: 'right'}}>Barriers:</td>
+            <td style={{width: '600px'}}>
+              <div style={{display: 'inline-block', backgroundColor: '#C8C7CF', width: (600 / 6025) * barrier + 'px', height: '20px'}}></div>
+            </td>
+            <td style={{width: '150px', textAlign: 'left'}}>
+              {barrier}
+            </td>
+          </tr>
+          <tr>
             <td style={{width: '100px', textAlign: 'right'}}>Healing:</td>
-            <td><div style={{display: 'inline-block', backgroundColor: healing_color, width: (600 / 7) * healing + 'px', height: '20px'}}></div></td>
+            <td><div style={{display: 'inline-block', backgroundColor: healing_color, width: (600 / 15) * healing + 'px', height: '20px'}}></div></td>
             <td style={{width: '150px', textAlign: 'left'}}>{healing_message}</td>
           </tr>
           <tr>
             <td style={{width: '100px', textAlign: 'right'}}>Tank:</td>
             <td><div style={{display: 'inline-block', backgroundColor: tank_color, width: (600 / 7) * tank + 'px', height: '20px'}}></div></td>
-            <td style={{width: '150px', textAlign: 'left'}}>{tank_message}</td></tr>
+            <td style={{width: '150px', textAlign: 'left'}}>{tank_message}</td>
+          </tr>
           </tbody>
       </table>
     </div>
