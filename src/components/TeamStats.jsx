@@ -15,13 +15,13 @@ const TeamStats = ({team}) => {
 
   if (healing === 0) { healing_message = 'No healer'; healing_color = 'indianred' }
   else if (healing > 0 && healing < 4) { healing_message = 'Need more healing'; healing_color = 'indianred' }
-  else if (healing > 3 && healing < 6) { healing_message = 'Need more healing'; healing_color = 'palegoldenrod' }
-  else { healing_color = 'darkseagreen'}
+  else if (healing > 3 && healing < 6) { healing_message = 'Low healing'; healing_color = 'palegoldenrod' }
+  else { healing_color = 'darkseagreen'; healing_message = 'Good healing'}
 
   if (tank === 0) { tank_message = 'No tank'; tank_color = 'indianred' }
   else if (tank === 1) { tank_message = 'Need more tank'; tank_color = 'indianred' }
-  else if (tank < 3) { tank_message = 'Need more tank'; tank_color = 'palegoldenrod' }
-  else { tank_color = 'darkseagreen'}
+  else if (tank < 3) { tank_message = 'Low tank'; tank_color = 'palegoldenrod' }
+  else { tank_color = 'darkseagreen'; tank_message = 'Good tank';}
 
   return (
     <div>
