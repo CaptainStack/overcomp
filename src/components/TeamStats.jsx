@@ -25,24 +25,25 @@ const TeamStats = ({team}) => {
       <table>
         <tbody>
           <tr>
-            <td style={{width: '100px'}}>HP/Armor/Shields:</td>
+            <td style={{width: '100px', textAlign: 'right'}}>HP/Armor/Shields:</td>
             <td style={{width: '600px'}}>
-              <div style={{display: 'inline-block', backgroundColor: '#C8C7CF', width: (600 / 2900) * hitpoints + 'px', height: '25px'}}></div>
-              <div style={{display: 'inline-block', backgroundColor: '#C6A544', width: (600 / 2900) * armor + 'px', height: '25px'}}></div>
-              <div style={{display: 'inline-block', backgroundColor: '#2894B1', width: (600 / 2900) * shields + 'px', height: '25px'}}></div>
+              <div style={{display: 'inline-block', backgroundColor: '#C8C7CF', width: (600 / 2900) * hitpoints + 'px', height: '20px'}}></div>
+              <div style={{display: 'inline-block', backgroundColor: '#C6A544', width: (600 / 2900) * armor + 'px', height: '20px'}}></div>
+              <div style={{display: 'inline-block', backgroundColor: '#2894B1', width: (600 / 2900) * shields + 'px', height: '20px'}}></div>
             </td>
-            <td>
+            <td style={{width: '150px', textAlign: 'left'}}>
+              {hitpoints + '/' + armor + '/' + shields}
             </td>
           </tr>
           <tr>
-            <td>Healing:</td>
-            <td><div style={{display: 'inline-block', backgroundColor: healing_color, width: (600 / 7) * healing + 'px', height: '25px'}}></div></td>
-            <td style={{width: '150px'}}>{healing_message}</td>
+            <td style={{width: '100px', textAlign: 'right'}}>Healing:</td>
+            <td><div style={{display: 'inline-block', backgroundColor: healing_color, width: (600 / 7) * healing + 'px', height: '20px'}}></div></td>
+            <td style={{width: '150px', textAlign: 'left'}}>{healing_message}</td>
           </tr>
           <tr>
-            <td>Tank:</td>
-            <td><div style={{display: 'inline-block', backgroundColor: tank_color, width: (600 / 7) * tank + 'px', height: '25px'}}></div></td>
-            <td>{tank_message}</td></tr>
+            <td style={{width: '100px', textAlign: 'right'}}>Tank:</td>
+            <td><div style={{display: 'inline-block', backgroundColor: tank_color, width: (600 / 7) * tank + 'px', height: '20px'}}></div></td>
+            <td style={{width: '150px', textAlign: 'left'}}>{tank_message}</td></tr>
           </tbody>
       </table>
     </div>
