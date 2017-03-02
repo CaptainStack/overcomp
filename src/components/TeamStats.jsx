@@ -24,7 +24,7 @@ const TeamStats = ({team}) => {
   else { tank_color = 'darkseagreen'; tank_message = 'Good tank';}
 
   return (
-    <div>
+    <div id={'team-stats'}>
       <h2>Team Stats</h2>
       <table>
         <tbody>
