@@ -185,7 +185,7 @@ let state = {
     tank: 1
   },
   {
-    id: 15,
+    id: 16,
     name: "Reinhardt",
     hitpoints: 300,
     armor: 200,
@@ -197,7 +197,7 @@ let state = {
     tank: 2
   },
   {
-    id: 16,
+    id: 17,
     name: "Roadhog",
     hitpoints: 600,
     armor: 0,
@@ -209,7 +209,7 @@ let state = {
     tank: 1
   },
   {
-    id: 17,
+    id: 18,
     name: "Winston",
     hitpoints: 400,
     armor: 100,
@@ -221,7 +221,7 @@ let state = {
     tank: 1
   },
   {
-    id: 18,
+    id: 19,
     name: "Zarya",
     hitpoints: 200,
     armor: 0,
@@ -233,7 +233,7 @@ let state = {
     tank: 1
   },
   {
-    id: 19,
+    id: 20,
     name: "Ana",
     hitpoints: 200,
     armor: 0,
@@ -245,7 +245,7 @@ let state = {
     tank: 0
   },
   {
-    id: 20,
+    id: 21,
     name: "Lúcio",
     hitpoints: 200,
     armor: 0,
@@ -257,7 +257,7 @@ let state = {
     tank: 0
   },
   {
-    id: 21,
+    id: 22,
     name: "Mercy",
     hitpoints: 200,
     armor: 0,
@@ -269,7 +269,7 @@ let state = {
     tank: 0
   },
   {
-    id: 22,
+    id: 23,
     name: "Symmetra",
     hitpoints: 100,
     armor: 0,
@@ -281,7 +281,7 @@ let state = {
     tank: 0
   },
   {
-    id: 23,
+    id: 24,
     name: "Zenyatta",
     hitpoints: 50,
     armor: 0,
@@ -293,12 +293,12 @@ let state = {
     tank: 0
   }],
   selected_heroes: [
-    {id: 24, name: "Empty", hitpoints: 0, armor: 0, shields: 0, barrier: 0, healing: 0, tank: 0},
     {id: 25, name: "Empty", hitpoints: 0, armor: 0, shields: 0, barrier: 0, healing: 0, tank: 0},
     {id: 26, name: "Empty", hitpoints: 0, armor: 0, shields: 0, barrier: 0, healing: 0, tank: 0},
     {id: 27, name: "Empty", hitpoints: 0, armor: 0, shields: 0, barrier: 0, healing: 0, tank: 0},
     {id: 28, name: "Empty", hitpoints: 0, armor: 0, shields: 0, barrier: 0, healing: 0, tank: 0},
-    {id: 29, name: "Empty", hitpoints: 0, armor: 0, shields: 0, barrier: 0, healing: 0, tank: 0}
+    {id: 29, name: "Empty", hitpoints: 0, armor: 0, shields: 0, barrier: 0, healing: 0, tank: 0},
+    {id: 30, name: "Empty", hitpoints: 0, armor: 0, shields: 0, barrier: 0, healing: 0, tank: 0}
   ],
   buttonClick: hero_id => e => {
     let clicked_hero = state.heroes.find((hero) => hero.id === hero_id);
