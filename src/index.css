@@ -11,3 +11,8 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
 }
+@media (max-width: 720px) {
+  body {
+    padding: 0;
+  }
+}
