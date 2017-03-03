@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/TeamStats.css';
 
 const TeamStats = ({team}) => {
   let hitpoints = team.reduce((acc, hero) => acc + hero.hitpoints, 0);

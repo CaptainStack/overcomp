@@ -1,6 +1,7 @@
 import React from 'react';
 import HeroSlot from './HeroSlot';
 import TeamStats from './TeamStats';
+import '../styles/TeamRoster.css';
 
 const TeamRoster = ({selected_heroes, clickAction}) => {
   let hero_slots = selected_heroes.map((selected_hero) => 

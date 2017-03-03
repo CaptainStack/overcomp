@@ -1,5 +1,6 @@
 import React from 'react';
 import HeroButton from './HeroButton';
+import '../styles/HeroSet.css';
 
 const HeroSet = ({heroes, selected_heroes, category, clickAction}) => {
   let hero_buttons = heroes.map((hero) => 

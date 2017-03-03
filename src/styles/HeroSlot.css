@@ -1,0 +1,25 @@
+.hero-slot {
+  padding: 0.5em;
+  display: inline-block;
+  width: 112px;
+}
+.hero-slot h3 {
+  font: italic normal normal 10px Big Noodle Too,impact,sans-serif;
+  font-size: 1.2rem;
+  line-height: normal;
+  letter-spacing: .08rem;
+  margin: 0;
+  text-align: center;
+}
+.slot-portrait {
+  border: 1px solid black;
+  width: 112px;
+  height: 100px;
+  background-color: rgb(200, 199, 207);
+  border-radius: 7px;
+  overflow: hidden;
+}
+.selected.slot-portrait:hover {
+  cursor: pointer;
+  border: 1px solid #f9ab4f;
+}

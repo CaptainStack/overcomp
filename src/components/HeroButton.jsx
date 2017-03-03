@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/HeroButton.css';
 
 const HeroButton = ({hero, roster, clickAction}) => {
   let selected_class = roster.findIndex((roster_hero) => hero.id === roster_hero.id) !== -1 ? 'selected' : 'unselected';
