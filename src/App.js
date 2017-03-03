@@ -12,9 +12,7 @@ const App = ({state}) => {
   return (
     <div className="App">
       <img id='logo' src='logo.png' alt='logo'/>
-      <div className='row' id='team-row'>
-        <TeamRoster selected_heroes={state.selected_heroes} clickAction={state.slotClick} />
-      </div>
+      <TeamRoster selected_heroes={state.selected_heroes} clickAction={state.slotClick} />
       <div className='row' id='hero-select'>
         <HeroSet heroes={offense_heroes} selected_heroes={state.selected_heroes} category='Offense' clickAction={state.buttonClick}/>
         <HeroSet heroes={defense_heroes} selected_heroes={state.selected_heroes} category='Defense' clickAction={state.buttonClick}/>
