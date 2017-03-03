@@ -29,6 +29,5 @@ footer a:hover {
 @media (max-width: 720px) {
   #logo {
     width: 100%;
-    margin-bottom: 2em;
   }
 }

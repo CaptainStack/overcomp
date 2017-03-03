@@ -17,3 +17,8 @@
   width: 40%;
   min-width: 500px;
 }
+@media (max-width: 720px) {
+  #hero-slots, .TeamStats {
+    width: 100%;
+  }
+}
