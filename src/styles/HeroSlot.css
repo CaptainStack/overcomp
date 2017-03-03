@@ -19,6 +19,9 @@
   border-radius: 7px;
   overflow: hidden;
 }
+.slot-portrait.selected {
+  background-color: lightblue;
+}
 .selected.slot-portrait:hover {
   cursor: pointer;
   border: 1px solid #f9ab4f;

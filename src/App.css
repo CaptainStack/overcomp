@@ -11,9 +11,6 @@
   width: 400px;
   margin-bottom: 30px;
 }
-.selected {
-  background-color: lightblue;
-}
 footer {
   display: flex;
   justify-content: space-between;
