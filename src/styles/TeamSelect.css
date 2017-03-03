@@ -2,3 +2,8 @@
   display: flex;
   justify-content: space-around;
 }
+.stat-bar {
+  display: inline-block;
+  transition: 0.5s;
+  height: 20px;
+}
