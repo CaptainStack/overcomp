@@ -15,10 +15,13 @@
 }
 .TeamStats {
   width: 40%;
-  min-width: 400px;
+  min-width: 360px;
 }
 @media (max-width: 720px) {
   .TeamStats {
+    width: 100%;
+  }
+  #hero-slots {
     width: 100%;
   }
 }
