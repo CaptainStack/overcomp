@@ -1,14 +1,18 @@
 .TeamStats h2 {
   text-align: center;
 }
+.TeamStats {
+  width: 40%
+}
 .left-column {
-  width: 100px;
-  text-align: right;
+  width: 10%;
 }
 .center-column {
   width: 50%;
 }
 .right-column {
-  width: 150px; 
-  text-align: left;
+  width: 25%; 
+}
+table td:nth-child(1) {
+  text-align: right;
 }

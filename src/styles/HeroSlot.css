@@ -16,7 +16,7 @@
   width: 112px;
   height: 100px;
   background-color: rgb(200, 199, 207);
-  border-radius: 7px;
+  border-radius: 0.4em;
   overflow: hidden;
 }
 .slot-portrait.selected {

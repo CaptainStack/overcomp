@@ -5,5 +5,5 @@
 .stat-bar {
   display: inline-block;
   transition: 0.5s;
-  height: 20px;
+  height: 1.2em;
 }
