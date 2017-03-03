@@ -5,10 +5,15 @@
   justify-content: center;
   align-items: center;
   width: 30%;
+  min-width:  380px;
 }
 #team-roster {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   margin-bottom: 1.3em;
+}
+.TeamStats {
+  width: 40%;
+  min-width: 700px;
 }
