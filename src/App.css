@@ -8,7 +8,7 @@
 #logo {
   margin-left: auto;
   margin-right: auto;
-  width: 30em;
+  width: 25em;
   margin-bottom: 2em;
 }
 footer {
@@ -26,7 +26,7 @@ footer a {
 footer a:hover {
   color: rgba(51, 51, 51, 0.6);
 }
-@media (max-width: 720px) {
+@media (max-width: 500px) {
   #logo {
     width: 100%;
   }
