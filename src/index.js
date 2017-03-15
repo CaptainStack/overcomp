@@ -2,9 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
+import { createStore } from 'redux';
+import reducer from './reducer';
 
-let state = {
-  heroes: [{
+const store = createStore(reducer);
+
+let heroes = [{
     id: 1,
     name: "Genji",
     hitpoints: 200,
@@ -291,33 +294,36 @@ let state = {
     category: "support",
     healing: 2,
     tank: 0
-  }],
-  selected_heroes: [
-    {id: 25, name: "Empty", hitpoints: 0, armor: 0, shields: 0, barrier: 0, healing: 0, tank: 0},
-    {id: 26, name: "Empty", hitpoints: 0, armor: 0, shields: 0, barrier: 0, healing: 0, tank: 0},
-    {id: 27, name: "Empty", hitpoints: 0, armor: 0, shields: 0, barrier: 0, healing: 0, tank: 0},
-    {id: 28, name: "Empty", hitpoints: 0, armor: 0, shields: 0, barrier: 0, healing: 0, tank: 0},
-    {id: 29, name: "Empty", hitpoints: 0, armor: 0, shields: 0, barrier: 0, healing: 0, tank: 0},
-    {id: 30, name: "Empty", hitpoints: 0, armor: 0, shields: 0, barrier: 0, healing: 0, tank: 0}
-  ],
+  }];
+
+
+
+let actions = {
   buttonClick: hero_id => e => {
-    let clicked_hero = state.heroes.find((hero) => hero.id === hero_id);
-    let selected_index = state.selected_heroes.findIndex((hero) => hero.name === clicked_hero.name);
-    if (selected_index < 0) {
-      let empty_index = state.selected_heroes.findIndex((hero) => hero.name === "Empty");
-      state.selected_heroes[empty_index] = clicked_hero;
+    let clicked_hero = heroes.find((hero) => hero.id === hero_id);
+    if (store.getState().indexOf(clicked_hero) === -1) {
+      store.dispatch({ type: 'ADD_HERO_TO_ROSTER', hero: clicked_hero });
     } else {
-      state.selected_heroes[selected_index] = {id: selected_index + 25, name: "Empty", hitpoints: 0, armor: 0, shields: 0, barrier: 0, healing: 0, tank: 0};
+      store.dispatch({ type: 'REMOVE_HERO_FROM_ROSTER', hero: clicked_hero });
     }
-    ReactDOM.render(<App state={state}/>, document.getElementById('root'));
   },
   slotClick: slot_id => e => {
-    let clicked_index = state.selected_heroes.findIndex((slot) => slot.id === slot_id);
-    if (state.selected_heroes[clicked_index].name !== "Empty") {
-      state.selected_heroes[clicked_index] = {id: clicked_index + 25, name: "Empty", hitpoints: 0, armor: 0, shields: 0, barrier: 0, healing: 0, tank: 0};
-      ReactDOM.render(<App state={state}/>, document.getElementById('root'));
+    let roster = store.getState();
+    let clicked_index = roster.findIndex((slot) => slot.id === slot_id);
+    if (roster[clicked_index].name !== "Empty") {
+      store.dispatch({ type: 'REMOVE_HERO_FROM_ROSTER', hero: roster[clicked_index] });
     }
   }
 };
 
-ReactDOM.render(<App state={state}/>, document.getElementById('root'));
+const render = () => ReactDOM.render(
+  <App 
+    roster={store.getState()} 
+    heroes={heroes} 
+    actions={actions}
+  />, 
+  document.getElementById('root')
+);
+
+render();
+store.subscribe(render);
