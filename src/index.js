@@ -6,8 +6,8 @@ import { createStore } from 'redux';
 import reducer from './reducer';
 
 const store = createStore(reducer);
-let roster = store.getState();
-let heroes = [{
+const roster = store.getState();
+const heroes = [{
     id: 1,
     name: "Genji",
     hitpoints: 200,
@@ -298,7 +298,7 @@ let heroes = [{
 
 
 
-let actions = {
+const actions = {
   buttonClick: hero_id => e => {
     let clicked_hero = heroes.find((hero) => hero.id === hero_id);
     if (roster.indexOf(clicked_hero) === -1) {
