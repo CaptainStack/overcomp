@@ -6,7 +6,7 @@ import { createStore } from 'redux';
 import reducer from './reducer';
 
 const store = createStore(reducer);
-
+let roster = store.getState();
 let heroes = [{
     id: 1,
     name: "Genji",
@@ -301,14 +301,13 @@ let heroes = [{
 let actions = {
   buttonClick: hero_id => e => {
     let clicked_hero = heroes.find((hero) => hero.id === hero_id);
-    if (store.getState().indexOf(clicked_hero) === -1) {
+    if (roster.indexOf(clicked_hero) === -1) {
       store.dispatch({ type: 'ADD_HERO_TO_ROSTER', hero: clicked_hero });
     } else {
       store.dispatch({ type: 'REMOVE_HERO_FROM_ROSTER', hero: clicked_hero });
     }
   },
   slotClick: slot_id => e => {
-    let roster = store.getState();
     let clicked_index = roster.findIndex((slot) => slot.id === slot_id);
     if (roster[clicked_index].name !== "Empty") {
       store.dispatch({ type: 'REMOVE_HERO_FROM_ROSTER', hero: roster[clicked_index] });
@@ -318,7 +317,7 @@ let actions = {
 
 const render = () => ReactDOM.render(
   <App 
-    roster={store.getState()} 
+    roster={roster} 
     heroes={heroes} 
     actions={actions}
   />, 
