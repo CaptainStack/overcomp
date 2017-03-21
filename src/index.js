@@ -7,6 +7,6 @@ import reducer from './reducer';
 
 export const store = createStore(reducer);
 
-const render = () => ReactDOM.render(<App roster={store.getState()} />, document.getElementById('root'));
+const render = () => ReactDOM.render(<App state={store.getState()} />, document.getElementById('root'));
 render();
 store.subscribe(render);
