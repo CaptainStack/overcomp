@@ -8,7 +8,7 @@ const HeroSet = ({heroes_set, selected_heroes, category}) => {
     <HeroButton key={hero.id} 
                 hero={hero} 
                 roster={selected_heroes}
-                clickAction={buttonClick(hero.id)} />);
+                clickAction={buttonClick(hero)} />);
   return (
     <div className={'hero-set'}>
       <h2>{category}</h2>

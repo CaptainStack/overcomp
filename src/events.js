@@ -1,9 +1,7 @@
-import { heroes } from './heroes'
 import { store } from './index'
 
-export const buttonClick = hero_id => e => {
+export const buttonClick = clicked_hero => e => {
   let roster = store.getState().get('team');
-  let clicked_hero = heroes.find((hero) => hero.id === hero_id);
   if (roster.indexOf(clicked_hero) === -1) {
     store.dispatch({ type: 'ADD_HERO_TO_ROSTER', hero: clicked_hero });
   } else {
