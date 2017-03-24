@@ -4,6 +4,13 @@ import App from './App';
 import './index.css';
 import { createStore } from 'redux';
 import reducer from './reducer';
+import {trackMouse} from './events';
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelector('body').addEventListener('mousemove', (e) => {
+    trackMouse(e);
+  });
+}, false);
 
 export const store = createStore(reducer);
 

@@ -1,0 +1,8 @@
+.hover-info {
+  border: 1px solid black;
+  position: absolute;
+  background-color: lightgrey;
+  border-radius: 10px;
+  padding: 1em;
+  pointer-events: none;
+}
