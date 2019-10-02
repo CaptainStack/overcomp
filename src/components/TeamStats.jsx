@@ -25,41 +25,43 @@ const TeamStats = ({team}) => {
   else { tank_color = 'darkseagreen'; tank_message = 'Good tank'; }
 
   return (
-    <div className={'TeamStats'}>
-      <h2>Team Stats</h2>
-      <table>
-        <colgroup>
-          <col className='left-column'></col>
-          <col className='center-column'></col>
-          <col className='right-column'></col>
-        </colgroup>
-        <tbody>
-          <tr>
-            <td>HP/Armor/Shields:</td>
-            <td>
-              <div className='stat-bar' style={{backgroundColor: '#C8C7CF', width: hitpoints / 3000 * 100  + '%'}}></div>
-              <div className='stat-bar' style={{backgroundColor: '#C6A544', width: armor / 3000 * 100  + '%'}}></div>
-              <div className='stat-bar' style={{backgroundColor: '#2894B1', width: shields / 3000 * 100  + '%'}}></div>
-            </td>
-            <td>{hitpoints + '/' + armor + '/' + shields}</td>
-          </tr>
-          <tr>
-            <td>Barriers:</td>
-            <td><div className='stat-bar' style={{backgroundColor: '#C8C7CF', width: barrier / 6025 * 100 + '%'}}></div></td>
-            <td>{barrier}</td>
-          </tr>
-          <tr>
-            <td>Healing:</td>
-            <td><div className='stat-bar' style={{backgroundColor: healing_color, width: healing / 15 * 100  + '%'}}></div></td>
-            <td>{healing_message}</td>
-          </tr>
-          <tr>
-            <td>Tank:</td>
-            <td><div className='stat-bar' style={{backgroundColor: tank_color, width: tank / 8 * 100  + '%'}}></div></td>
-            <td>{tank_message}</td>
-          </tr>
-        </tbody>
-      </table>
+    <div className='teamCard'>
+      <div className={'TeamStats'}>
+        <h2>Team Stats</h2>
+        <table>
+          <colgroup>
+            <col className='left-column'></col>
+            <col className='center-column'></col>
+            <col className='right-column'></col>
+          </colgroup>
+          <tbody>
+            <tr>
+              <td>HP/Armor/Shields:</td>
+              <td>
+                <div className='stat-bar' style={{backgroundColor: '#C8C7CF', width: hitpoints / 3000 * 100  + '%'}}></div>
+                <div className='stat-bar' style={{backgroundColor: '#C6A544', width: armor / 3000 * 100  + '%'}}></div>
+                <div className='stat-bar' style={{backgroundColor: '#2894B1', width: shields / 3000 * 100  + '%'}}></div>
+              </td>
+              <td>{hitpoints + '/' + armor + '/' + shields}</td>
+            </tr>
+            <tr>
+              <td>Barriers:</td>
+              <td><div className='stat-bar' style={{backgroundColor: '#C8C7CF', width: barrier / 6025 * 100 + '%'}}></div></td>
+              <td>{barrier}</td>
+            </tr>
+            <tr>
+              <td>Healing:</td>
+              <td><div className='stat-bar' style={{backgroundColor: healing_color, width: healing / 15 * 100  + '%'}}></div></td>
+              <td>{healing_message}</td>
+            </tr>
+            <tr>
+              <td>Tank:</td>
+              <td><div className='stat-bar' style={{backgroundColor: tank_color, width: tank / 8 * 100  + '%'}}></div></td>
+              <td>{tank_message}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

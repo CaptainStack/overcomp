@@ -90,7 +90,7 @@ export const heroes = [{
     shields: 0,
     barrier: 0,
     portrait: "bastion-portrait.png",
-    category: "defense",
+    category: "offense",
     healing: 1,
     tank: 0
   },
@@ -102,7 +102,7 @@ export const heroes = [{
     shields: 0,
     barrier: 0,
     portrait: "hanzo-portrait.png",
-    category: "defense",
+    category: "offense",
     healing: 0,
     tank: 0
   },
@@ -114,7 +114,7 @@ export const heroes = [{
     shields: 0,
     barrier: 0,
     portrait: "junkrat-portrait.png",
-    category: "defense",
+    category: "offense",
     healing: 0,
     tank: 0
   },
@@ -126,7 +126,7 @@ export const heroes = [{
     shields: 0,
     barrier: 500,
     portrait: "mei-portrait.png",
-    category: "defense",
+    category: "offense",
     healing: 1,
     tank: 0
   },
@@ -138,7 +138,7 @@ export const heroes = [{
     shields: 0,
     barrier: 0,
     portrait: "torbjorn-portrait.png",
-    category: "defense",
+    category: "offense",
     healing: 0,
     tank: 0
   },
@@ -150,7 +150,7 @@ export const heroes = [{
     shields: 0,
     barrier: 0,
     portrait: "widowmaker-portrait.png",
-    category: "defense",
+    category: "offense",
     healing: 0,
     tank: 0
   },
@@ -224,7 +224,8 @@ export const heroes = [{
     portrait: "zarya-portrait.png",
     category: "tank",
     healing: 0,
-    tank: 1
+    tank: 1,
+   
   },
   {
     id: 20,
@@ -270,7 +271,7 @@ export const heroes = [{
     shields: 100,
     barrier: 1025,
     portrait: "symmetra-portrait.png",
-    category: "support",
+    category: "offense",
     healing: 0,
     tank: 0
   },
@@ -285,4 +286,76 @@ export const heroes = [{
     category: "support",
     healing: 2,
     tank: 0
-  }];
+  },
+  {
+    id: 25,
+    name: "Ashe",
+    hitpoints: 200,
+    armor: 0,
+    shields: 0,
+    barrier: 0,
+    portrait: "ashe-portrait.png",
+    category: "offense",
+    healing: 0,
+    tank: 0
+  },
+  {
+    id: 26,
+    name: "Baptiste",
+    hitpoints: 200,
+    armor: 0,
+    shields: 0,
+    barrier: 0,
+    portrait: "baptist-portrait.png",
+    category: "support",
+    healing: 1,
+    tank: 0
+  },
+  {
+    id: 27,
+    name: "Brigitte",
+    hitpoints: 200,
+    armor: 50,
+    shields: 0,
+    barrier: 500,
+    portrait: "brigitte-portrait.png",
+    category: "support",
+    healing: 2,
+    tank: 0
+  },
+  {
+    id: 28,
+    name: "DoomFist",
+    hitpoints: 250,
+    armor: 0,
+    shields: 0,
+    barrier: 0,
+    portrait: "doomfist-portrait.png",
+    category: "offense",
+    healing: 0,
+    tank: 0
+  },
+  {
+    id: 29,
+    name: "Moira",
+    hitpoints: 200,
+    armor: 0,
+    shields: 0,
+    barrier: 0,
+    portrait: "moira-portrait.png",
+    category: "support",
+    healing: 4,
+    tank: 0
+  },
+  {
+    id: 30,
+    name: "Wrecking Ball",
+    hitpoints: 500,
+    armor: 100,
+    shields: 0,
+    barrier: 0,
+    portrait: "hammy-portrait.png",
+    category: "tank",
+    healing: 0,
+    tank: 0
+  },];

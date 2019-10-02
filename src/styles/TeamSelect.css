@@ -1,9 +1,11 @@
 .TeamSelect {
   display: flex;
   justify-content: space-around;
+  font: italic normal normal 14px Big Noodle Too,impact,sans-serif;
 }
 .stat-bar {
   display: inline-block;
   transition: 0.5s;
   height: 1.2em;
 }
+

@@ -12,10 +12,10 @@
   background-size: auto 100%;
   background-position: 50% 50%;
   position: relative;
-  -webkit-transform: skew(-25rad) translateX(-5px);
-  -ms-transform: skew(-25rad) translateX(-5px);
   transform: skew(-25rad) translateX(-5px);
+       box-shadow: 0 100px 6px -6px #777;
 }
+
 .clipping-mask {
   display: block;
   position: relative;
@@ -31,6 +31,7 @@
   overflow: hidden;
   border-radius: 7px;
   transform: skew(25rad);
+  box-shadow: 0 15px 6px -6px #777;
 }
 .clipping-mask:hover {
   background-color: #f9ab4f;
@@ -46,4 +47,5 @@
   color: #333;
   white-space: nowrap;
   font: italic normal normal 14px Big Noodle Too,impact,sans-serif;
+  
 }

@@ -11,7 +11,6 @@ const TeamSelect = ({selected_heroes, buttonClick}) => {
   return (
     <div className={'TeamSelect row'}>
       <HeroSet heroes_set={offense_heroes} selected_heroes={selected_heroes} category='Offense' />
-      <HeroSet heroes_set={defense_heroes} selected_heroes={selected_heroes} category='Defense' />
       <HeroSet heroes_set={tank_heroes} selected_heroes={selected_heroes} category='Tank' />
       <HeroSet heroes_set={support_heroes} selected_heroes={selected_heroes} category='Support' />
     </div>
